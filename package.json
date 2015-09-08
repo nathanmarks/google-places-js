@@ -1,0 +1,54 @@
+{
+  "name": "google-places-js",
+  "description": "Simple API client for Google Places.",
+  "version": "0.1.0-beta",
+  "main": "build/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nathanmarks/google-places-node.git"
+  },
+  "scripts": {
+    "init": "rimraf .validate.json && rimraf .jshintrc",
+    "clean": "rimraf build",
+    "lint": "eslint source && eslint test",
+    "prebuild": "npm run clean",
+    "build": "babel -r 1 --plugins object-assign -d build source",
+    "test": "babel-node test/index.js",
+    "cov": "npm run cov:clean && npm run cov:generate",
+    "cov:clean": "rimraf coverage",
+    "cov:generate": "babel-node node_modules/.bin/isparta cover --report text --report html test/index.js",
+    "prepublish": "npm run build",
+    "validate": "npm run lint && npm run build && npm test",
+    "validate-dev": "npm run lint && npm run build && npm test | faucet",
+    "audit": "nsp package",
+    "missing": "dependency-check package.json",
+    "extra": "dependency-check package.json --extra --ignore",
+    "ok": "echo 'OK if the dependencies above are all devDependencies.' && echo 'Clean up any unused dependencies.'",
+    "deps": "npm run missing && npm run extra && npm run ok",
+    "precheck": "npm run validate",
+    "check": "npm run audit && npm run deps && npm outdated --depth 0"
+  },
+  "pre-commit": [
+    "check"
+  ],
+  "dependencies": {
+    "babel-core": "^5.8.19",
+    "babel-plugin-object-assign": "^1.2.1",
+    "bluebird": "^2.9.30",
+    "i": "^0.3.3",
+    "lodash": "^3.9.3",
+    "moment": "^2.10.6",
+    "request-promise": "^0.4.3"
+  },
+  "devDependencies": {
+    "babel": "^5.8.19",
+    "babel-eslint": "^3.1.9",
+    "dependency-check": "^2.4.0",
+    "eslint": "^0.22.1",
+    "faucet": "0.0.1",
+    "nsp": "^1.0.1",
+    "precommit-hook": "^2.0.1",
+    "rimraf": "^2.4.3",
+    "tape": "^4.0.0"
+  }
+}

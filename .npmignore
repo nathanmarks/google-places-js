@@ -1,0 +1,5 @@
+node_modules
+.validate.json
+.jshintrc
+.jshintignore
+tester.js
