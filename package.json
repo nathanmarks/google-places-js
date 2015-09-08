@@ -12,7 +12,7 @@
     "clean": "rimraf build",
     "lint": "eslint source && eslint test",
     "prebuild": "npm run clean",
-    "build": "babel -r 1 --plugins object-assign -d build source",
+    "build": "babel --plugins object-assign -d build source",
     "test": "babel-node test/index.js",
     "cov": "npm run cov:clean && npm run cov:generate",
     "cov:clean": "rimraf coverage",
