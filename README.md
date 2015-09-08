@@ -1,6 +1,6 @@
 # Google Places API Client
 
-**Detailed docs coming soon...**
+**Detailed docs and tests coming soon...**
 
 
 ## Basic Usage
