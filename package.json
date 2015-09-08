@@ -1,11 +1,11 @@
 {
   "name": "google-places-js",
   "description": "Simple API client for Google Places.",
-  "version": "0.1.0-beta",
+  "version": "0.1.0-beta2",
   "main": "build/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nathanmarks/google-places-node.git"
+    "url": "https://github.com/nathanmarks/google-places-js.git"
   },
   "scripts": {
     "init": "rimraf .validate.json && rimraf .jshintrc",
