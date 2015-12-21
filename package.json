@@ -1,7 +1,7 @@
 {
   "name": "google-places-js",
   "description": "Simple API client for Google Places.",
-  "version": "0.1.0-beta2",
+  "version": "0.1.1",
   "main": "build/index.js",
   "repository": {
     "type": "git",
@@ -37,7 +37,6 @@
     "bluebird": "^2.9.30",
     "i": "^0.3.3",
     "lodash": "^3.9.3",
-    "moment": "^2.10.6",
     "request-promise": "^0.4.3"
   },
   "devDependencies": {
