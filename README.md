@@ -16,7 +16,7 @@ const places = Places.create({ key: 'YOUR_API_KEY' });
 
 // Logs the response from an autocomplete search
 
-places.autocomplete('Toron');.then((res) => {
+places.autocomplete('Toron').then((res) => {
   console.log(res);
 }).catch((err) => {
   console.log(err);
